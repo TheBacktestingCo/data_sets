@@ -88,3 +88,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 **Developed with ❤️ by [TheBacktestingCo](https://github.com/TheBacktestingCo)**
 *Empowering traders with institutional-grade data.*
+
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=TheBacktestingCo/data_sets&type=Date)](https://star-history.com/#TheBacktestingCo/data_sets&Date)
