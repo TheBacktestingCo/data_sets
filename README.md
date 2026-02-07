@@ -31,13 +31,19 @@ data_sets/
     └── parquet/     # High-performance Parquet files for big data workflows
 ```
 
-### 📊 Available Data Sets (Binance 1m)
+### 📊 Master Data Sets (Binance 1m)
+
+| Asset       | Format        | Start Time          | End Time            |
+| :---------- | :------------ | :------------------ | :------------------ |
+| **BTCUSDT** | CSV & Parquet | 2022-01-01 00:00:00 | 2026-01-31 23:59:00 |
+| **ETHUSDT** | CSV & Parquet | 2022-01-01 00:00:00 | 2026-01-31 23:59:00 |
+| **SOLUSDT** | CSV & Parquet | 2022-01-01 00:00:00 | 2026-01-31 23:59:00 |
+| **XRPUSDT** | CSV & Parquet | 2022-01-01 00:00:00 | 2026-01-31 23:59:00 |
+
+### 🛠️ Other Available Assets (Binance 1m)
 
 | Symbol | Parquet | CSV | Timeframe |
 | :--- | :---: | :---: | :---: |
-| **BTC/USDT** | ✅ | ⌛ | 1m |
-| **ETH/USDT** | ✅ | ✅ | 1m |
-| **XRP/USDT** | ✅ | ⌛ | 1m |
 | **HYPE/USDT** | ✅ | ⌛ | 1m |
 | **TRUMP/USDT** | ✅ | ⌛ | 1m |
 | **ALGO/USDT** | ✅ | ⌛ | 1m |
@@ -54,7 +60,7 @@ For large-scale backtesting, we recommend using the `.parquet` files for signifi
 import pandas as pd
 
 # Load ETH 1m data in seconds
-df = pd.read_parquet('binance/parquet/ETHUSDT_1m_master.parquet')
+df = pd.read_parquet('binance/parquet/ETHUSDT_1m_5yr.parquet')
 print(df.head())
 ```
 
