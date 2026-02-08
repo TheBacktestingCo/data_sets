@@ -16,22 +16,21 @@ Accessing high-quality historical data is often the biggest bottleneck in quanti
 - **1-Minute Granularity**: Master-level precision for intra-day strategy development.
 - **Multiple Formats**: Optimized **Apache Parquet** for speed and standard **CSV** for compatibility.
 - **Clean Data**: Pre-processed to handle gaps, outliers, and formatting inconsistencies.
-- **Diverse Assets**: Covering major pairs like BTC, ETH, XRP and trending tokens like HYPE, TRUMP.
+- **Institutional Coverage**: High-frequency datasets for major liquid assets.
 
 ---
 
 ## 📂 Repository Structure
 
-The data is organized by exchange and format to ensure seamless integration into your trading pipeline.
+The data is organized into root-level directories for maximum accessibility.
 
 ```bash
 data_sets/
-└── binance/
-    ├── csv/         # Standard CSV files for quick analysis
-    └── parquet/     # High-performance Parquet files for big data workflows
+├── csv/         # Standard CSV files for quick analysis
+└── parquet/     # High-performance Parquet files for big data workflows
 ```
 
-### 📊 Master Data Sets (Binance 1m)
+### 📊 Master Data Sets (1m Interval)
 
 | Asset       | Format        | Start Time          | End Time            |
 | :---------- | :------------ | :------------------ | :------------------ |
@@ -39,15 +38,6 @@ data_sets/
 | **ETHUSDT** | CSV & Parquet | 2022-01-01 00:00:00 | 2026-01-31 23:59:00 |
 | **SOLUSDT** | CSV & Parquet | 2022-01-01 00:00:00 | 2026-01-31 23:59:00 |
 | **XRPUSDT** | CSV & Parquet | 2022-01-01 00:00:00 | 2026-01-31 23:59:00 |
-
-### 🛠️ Other Available Assets (Binance 1m)
-
-| Symbol | Parquet | CSV | Timeframe |
-| :--- | :---: | :---: | :---: |
-| **HYPE/USDT** | ✅ | ⌛ | 1m |
-| **TRUMP/USDT** | ✅ | ⌛ | 1m |
-| **ALGO/USDT** | ✅ | ⌛ | 1m |
-| **ZEC/USDT** | ✅ | ⌛ | 1m |
 
 ---
 
@@ -60,12 +50,12 @@ For large-scale backtesting, we recommend using the `.parquet` files for signifi
 import pandas as pd
 
 # Load ETH 1m data in seconds
-df = pd.read_parquet('binance/parquet/ETHUSDT_1m_5yr.parquet')
+df = pd.read_parquet('parquet/ETHUSDT_1m_5yr.parquet')
 print(df.head())
 ```
 
 ### 2. Direct Download
-You can download files directly from the `binance/` directory or clone the repository for full access:
+You can download files directly from the repository or clone it for full access:
 ```bash
 git clone https://github.com/TheBacktestingCo/data_sets.git
 ```
@@ -73,7 +63,7 @@ git clone https://github.com/TheBacktestingCo/data_sets.git
 ---
 
 ## 🎯 SEO & Keywords
-`algorithmic trading` `backtesting data` `crypto historical data` `binance ohlcv` `1m crypto data` `quant finance` `machine learning for trading` `historical market data` `python trading` `pandas` `parquet data`
+`algorithmic trading` `backtesting data` `crypto historical data` `ohlcv` `1m crypto data` `quant finance` `machine learning for trading` `historical market data` `python trading` `pandas` `parquet data`
 
 ---
 
@@ -81,7 +71,7 @@ git clone https://github.com/TheBacktestingCo/data_sets.git
 Found a gap? Have more data to share? Contributions are welcome! 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AddMoreData`)
-3. Commit your Changes (`git commit -m 'Add SOLUSDT 1m data'`)
+3. Commit your Changes (`git commit -m 'Add new asset data'`)
 4. Push to the Branch (`git push origin feature/AddMoreData`)
 5. Open a Pull Request
 
